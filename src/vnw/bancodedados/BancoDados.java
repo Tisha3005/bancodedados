@@ -8,7 +8,7 @@ public interface BancoDados {
 
     Usuario buscaUsuarioPorNome(String nome);
 
-    List<Usuario> excluirUsuario(Usuario usuario);
+    void excluirUsuario(Usuario usuario);
 
     List<Usuario> buscaTodosUsuarios();
 

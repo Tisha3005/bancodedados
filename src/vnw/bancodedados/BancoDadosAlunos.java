@@ -26,16 +26,14 @@ public abstract class BancoDadosAlunos implements BancoDados {
     }
 
     @Override
-    public List<Usuario> excluirUsuario(Usuario usuario) {
+    public void excluirUsuario(Usuario usuario) {
         // implemente a exclusão de um usuário
         for (int i = 0; i < usuarios.size(); i++) {
-            if (usuario.getNome().equalsIgnoreCase(usuario.nome)){
+            if (usuarios.get(i).nome.equalsIgnoreCase(usuario.nome)){
                 System.out.println(usuario.getNome());
                 usuarios.remove(i);
-                return usuarios;
             }
         }
-        return null;
     }
 
     // implemente a busca que retorna todos os usuarios
